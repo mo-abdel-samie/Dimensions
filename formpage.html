@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="img/googleg_standard_color_128dp.png" rel="shortcut icon">
+    <title>calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/styel.css">
+    <style>
+        body
+        {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        form
+        {
+            background-color: rgb(0, 0, 0,0.5);
+        }
+    </style>
+<title>form </title>
+</head>
+<body class=" container" style="background-image: url(images/1.jpg);" >
+        <h1 class="text-center"  >Menyawe</h1>
+        <div class="row justify-content-center">
+            <form class="col-5"  >
+                <div class="text-center h5" id='error'> errors </div>
+                <input type='text' id='names' placeholder="full name" class="a form-control mb-3" >
+                
+                <input type="email" id='email' placeholder="xxxx@xxx.com" class="a form-control mb-3">
+                
+                <input type='text' id='phone' placeholder="phone" class="a form-control mb-3" >
+                
+                <input type='password' id='pass' placeholder="*********" class="a form-control mb-3">
+                
+                <input type='password' id='confirm_pass' placeholder="*********" class="a form-control mb-3">
+                
+                <textarea placeholder="talk about yourself ..." id="about" class="form-control mb-3" ></textarea>
+            
+                <input  type='checkbox'  onclick='show_Pass()' >
+                <label class=" text-white">show password</label>
+                <br>
+                <input class="btn  btn-danger offset-4 mr-2" type="reset" value="Reset">
+                <button class="btn btn-success" type="submit" disabled id='submit'> Submit </button>
+            </form>
+        </div>
+        <footer>
+            <p class=" text-white text-center card-footer mt-2">Copyright © 2020 All Rights Reserved <span class="text-warning">D.M &amp; E</span></p>
+        </footer>
+    
+    
+    <script src="js/js.js"></script>
+</body>
+
+</html>
