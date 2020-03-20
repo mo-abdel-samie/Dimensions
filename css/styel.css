@@ -1,0 +1,27 @@
+body
+{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    font-family: 'Bree Serif', serif;
+} 
+article
+{
+    width: 100%;
+    color: white;
+    background-image: url(../imeges/2105.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 5px;
+    padding-bottom: 5px
+}
+.cell
+{
+    margin-top: 10px;
+    padding-bottom: 3px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background: linear-gradient(-10deg,rgba(0, 0, 0, 0.705),#e1ab7d);
+    
+}
+
