@@ -19,9 +19,9 @@ names.addEventListener('keyup',function(){
     else
     {
         error.innerHTML='invalid name' ;
-        error.style.color='red';
+        error.classList=' alert-warning text-center text-danger mb-2 rounded';
     }
-});
+})
 
 function check_phone(x)
 {
@@ -36,7 +36,7 @@ function check_phone(x)
             else
             return true;
 
-    };
+    }
 
 }
 phone.addEventListener('keyup',function(){
@@ -45,9 +45,9 @@ phone.addEventListener('keyup',function(){
     else
     {
         error.innerHTML='The number is present' ;
-        error.style.color='red';
+        error.classList=' alert-warning text-center text-danger mb-2 rounded';
     }
-});
+})
 
 
 /* check length of password */
@@ -65,8 +65,8 @@ pass.addEventListener('keyup',function()
     error.innerHTML='';
     else
     {error.innerHTML='invalid password' ;
-    error.style.color='red';}
-});
+    error.classList=' alert-warning text-center text-danger mb-2  rounded';}
+})
 
 
 /* password confirmation */
@@ -84,9 +84,9 @@ confirmPass.addEventListener('keyup',function()
     error.innerHTML='';
     else
    { error.innerHTML='unmatched password' ;
-    error.style.color='red';}
+    error.classList=' alert-warning text-center text-danger mb-2  rounded';}
 
-});
+})
 
 function show_Pass()
 {
@@ -112,4 +112,4 @@ else
    { submit.disabled=true;}
 
 
-});
+})
