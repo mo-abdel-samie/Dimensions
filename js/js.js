@@ -1,10 +1,12 @@
 var names=document.getElementById('names'),
+    email=document.getElementById('email'),
     phone=document.getElementById('phone'),
     pass=document.getElementById('pass'),
     confirmPass=document.getElementById('confirm_pass'),
     submit=document.getElementById('submit'),
     error=document.getElementById('error');
 
+    
 function check_name(x)
 {
     if(x.value.length <6)
@@ -25,28 +27,36 @@ names.addEventListener('keyup',function(){
 
 function check_phone(x)
 {
-    var ph =[01552177276,01111346560,01113531567,01117652457];
-    ph.foreach(i);
-    function i(f)
+    const data =['01552177276','01111346560','01113531567','01117652457'];
+    for (var i=0;i<data.length;i++)
     {
-        if(
-            f==x.value
-            )
+        if(data[i]==x.value)
+        {
+            return true ;
+        }
+
+        // at all time inter in the else cass until the main condition is satisfied (*_*)
+        /*else
+        {
             return false ;
-            else
-            return true;
+        }*/
 
     }
-
+    
 }
 phone.addEventListener('keyup',function(){
+
+
     if(check_phone(phone))
-    error.innerHTML='';
-    else
     {
         error.innerHTML='The number is present' ;
         error.classList=' alert-warning text-center text-danger mb-2 rounded';
     }
+    else
+    {
+        error.innerHTML='' ;
+    }
+    
 })
 
 
@@ -54,18 +64,22 @@ phone.addEventListener('keyup',function(){
 function check_pass(x)
 { 
     if(x.value.length <4)
-    return false;
-    else
     return true;
+    else
+    return false;
 }
 
 pass.addEventListener('keyup',function()
 {
     if(check_pass(pass))
-    error.innerHTML='';
+    {
+        error.innerHTML='invalid password' ;
+        error.classList=' alert-warning text-center text-danger mb-2  rounded';
+    }
     else
-    {error.innerHTML='invalid password' ;
-    error.classList=' alert-warning text-center text-danger mb-2  rounded';}
+    {
+        error.innerHTML='';
+    }
 })
 
 
@@ -106,7 +120,7 @@ function show_Pass()
 /*button enable*/
 window.addEventListener('keyup',function()
 {
-    if( error.innerHTML.length<2 && names.value.length>1 && phone.value.length>1 )
+    if( error.innerHTML.length<2 && names.value.length>1 && phone.value.length>1 && email.value.length>1 )
     submit.disabled=false;
 else 
    { submit.disabled=true;}
